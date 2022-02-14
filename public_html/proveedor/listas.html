@@ -1,0 +1,44 @@
+
+<body onload="cargarVerProveedores()">   
+
+    <!-- start -->
+        <div class="row mt-3">
+            <div class="col-xl-12 stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <button type="button" class='btn btn-primary' data-bs-toggle="modal" data-bs-target="#modalProveedor" onclick="cargarGuardarProveedor()">Nuevo</button>
+                    <button class='btn btn-secondary' onclick="cargarVerProveedorEl()">Eliminados</button>
+                       <br> <br>
+
+                    <input class="form-control" id="txtSearch" onkeyup="busquedaProveedor()" placeholder="Busqueda" type="text">
+                        <br>
+
+                      <div class="row">
+
+                            <div class="table-responsive">
+                                
+                                <br>
+                                    <table class="table">
+                                    <thead>
+                                        <tr>                        
+                                            <th class="h6" >Nombre</th>
+                                            <th class="h6">Teléfono proveedor</th>
+                                            <th class="h6">Correo proveedor</th> 
+                                            <th class="h6">Nombre Contacto </th>                            
+                                            <th class="h6">Teléfono Contacto</th> 
+                                            <th class="h6">Correo contacto</th>  
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbProveedor">                                                
+                                    </tbody>
+                                </table>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- end container-->
+
+</body>

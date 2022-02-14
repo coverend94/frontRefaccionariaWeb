@@ -1,0 +1,56 @@
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+ <link href="assets/css/style.css" rel="stylesheet">
+
+<body onload="cargarVerProductos()">  
+    
+    
+    <!-- start -->
+        <div class="row mt-3">
+            <div class="col-xl-12 stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                  
+                    <button type="button" class='btn btn-primary' data-bs-toggle="modal" data-bs-target="#modalProducto" onclick="cargarGuardarProducto()">Nuevo</button>
+                    <button class='btn btn-secondary' onclick="cargarVerProductosEl()">Eliminados</button>
+                       <br> <br>
+
+                    <input class="form-control" id="txtSearch" onkeyup="busquedaProducto()" placeholder="Busqueda" type="text">
+                        <br>
+
+                      <div class="row">
+
+                            <div class="table-responsive">
+                                
+                                <br>
+                                    <table class="table">
+                                    <thead>
+                                        <tr>                        
+                                            <th class="h6" >Producto</th>
+                                            <th class="h6" >Número Parte</th>
+                                            <th class="h6" >Marca</th> 
+                                            <th class="h6" >Foto</th> 
+                                            <th class="h6">Costo compra</th>                             
+                                            <th class="h6">Precio venta</th>
+                                            <th class="h6">Posicion</th>   
+                                            <th class="h6">Stock</th>   
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbProducto">                                                
+                                    </tbody>
+                                </table>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- end container-->
+        
+    
+    
+    
+    
+   
+
+</body>

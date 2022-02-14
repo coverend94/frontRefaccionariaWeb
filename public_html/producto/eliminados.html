@@ -1,0 +1,55 @@
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+ <link href="assets/css/style.css" rel="stylesheet">
+
+<body onload="cargarProductosEliminados()">   
+    <div class="card">
+        <div class="card-content">
+            <div class="toolbar">
+                <!--        Here you can write extra buttons/actions for the toolbar      
+                -->
+                <div class="togglebutton">
+                </div>
+            </div>
+            <div class="material-datatables">
+                <div class="table-responsive">
+                    <input class="form-control" id="txtSearchEl" onkeyup="busquedaProductosEl()"  placeholder="Busqueda" type="text">
+                    <button class='btn btn-social' onclick="cargarVerProductos()">Activos</button> 
+                    <table class="table">
+                        <thead>
+                            <tr> 
+                                 <th>Codigo de barras</th>                        
+                                <th >Nombre Producto</th>
+                                <th >Numero de Parte</th>
+                                <th >Marca</th> 
+                                <th >Foto</th> 
+                                <th >Descripcion</th> 
+                                <th>Costo de compra</th>                             
+                                <th>Precio venta</th>
+                                <th>Posicion</th>  
+                                <th>Unidad</th>  
+                                <th>Stock</th>  
+                                <th>Ultima compra</th>  
+                                <th>Factura</th>
+                                <th>Proveedor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbProducto">                                                
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <!-- end content-->
+    </div>
+    <!--  end card  -->
+ <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+</body>
+<!--   Core JS Files   -->
+

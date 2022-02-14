@@ -1,0 +1,164 @@
+
+    <div class="wrapper" style="overflow-y:auto; overflow-x: auto;">     
+        <div class="">        
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div>
+                                    <br><br>
+                                    <button class='btn btn-danger' onclick='cerrarGuardarProducto()'>Cerrar Ventana</button>
+                                </div>
+                                <div class="card-content">
+
+                                    <h4 class="card-title">Actualizar Producto</h4>
+                                    <div class="form-group label-floating">
+                                        <input id="txtIdProducto" type="hidden" class="form-control">
+                                        <label class="control-label">Codigo de barras:</label>
+                                        <input id="txtCodigo" type="text" class="form-control">
+                                    </div>
+                                    
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Nombre producto:</label>
+                                        <input id="txtNombreProducto" type="text" class="form-control">
+                                    </div>         
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Numero de parte:</label>
+                                        <input id="txtNumeroParte" type="text" class="form-control">
+                                    </div>   
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Marca:</label>
+                                        <input id="txtMarca" type="text" class="form-control">
+                                    </div>  
+                                    
+                                    <div class="form-group label-floating">                                            
+                                            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                                
+                                                <div id="txtFotoB" class="fileinput-new thumbnail">
+                                                </div>
+                                                
+                                                <div class="fileinput-new thumbnail">
+                                                    <image id="imgProducto" style="width: 650; height: 650"/> 
+                                                </div>
+                                                <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                                <div>
+                                                    <span class="btn btn-rose btn-round btn-file">
+                                                        <span class="fileinput-new">Seleccionar imagen</span>
+                                                        <span class="fileinput-exists">Cambiar</span>
+                                                        <input class="form-control" id="txtFotoA" type="file" onchange="readURLProducto(this)">
+
+                                                    </span>                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Descripcion</label>
+                                        <input id="txtDescripcion" type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Costo compra:</label>
+                                        <input id="txtCostoCompra" type="text" class="form-control">
+                                    </div> 
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Precio venta:</label>
+                                        <input id="txtPrecioVenta" type="text" class="form-control">
+                                    </div>  
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Posicion:</label>
+                                        <input id="txtPosicion" type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Unidad:</label>
+                                        <select id="txtUnidad"  class="form-control">
+                                            <option value="1">Pieza</option>
+                                            <option value="2">Litro</option>
+                                            <option value="3">Galon</option>
+                                            <option value="4">Metro</option>
+                                            <option value="5">Garrafa</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Stock:</label>
+                                        <input id="txtStock" type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Ultima compra:</label>
+                                        <input id="txtUltimaCompra" type="date" class="form-control">
+                                    </div>
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Factura:</label>
+                                        <input class="form-control" name='dtFacturas' list="lstFacturas" id="dtFacturas" >
+                                        <input type="hidden" id="txtIdFactura">
+                                        <div id="divF">                                            
+                                        </div>                                       
+                                        <script>
+                                            var timer;
+                                            var dropdown = document.getElementById('dtFacturas');
+
+                                            dropdown
+                                                .addEventListener('change', function(event) {
+                                                    var target = event.target.value;
+                                                    var datalist = document.getElementById('lstFacturas').childNodes;
+                                                    timer = setTimeout(function() {
+                                                        for (var i = 0; i < datalist.length; i++) {
+                                                            if (datalist[i].value === target) {
+                                                                document.getElementById('txtIdFactura').value = datalist[i].dataset.value;
+                                                                alert(txtIdFactura.value);
+                                                                break;
+                                                            }
+                                                        }
+                                                    }, 1);
+                                                });
+
+                                            dropdown.addEventListener('blur', function(e) {
+                                                clearTimeout(timer);
+                                            });
+                                        </script>
+                                        
+                                    </div>
+                                    
+                                    
+                                     
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Proveedor</label>
+                                        <input class="form-control" name='dtProveedores' list="lstProveedores" id="dtProveedores" >
+                                        <input type="hidden" id="txtIdProveedor">
+                                        <div id="divP">                                            
+                                        </div>
+                                    </div>
+                                    <script>
+                                            var timer;
+                                            var dropdown = document.getElementById('dtProveedores');
+
+                                            dropdown
+                                                .addEventListener('change', function(event) {
+                                                    var target = event.target.value;
+                                                    var datalist = document.getElementById('lstProveedores').childNodes;
+                                                    timer = setTimeout(function() {
+                                                        for (var i = 0; i < datalist.length; i++) {
+                                                            if (datalist[i].value === target) {
+                                                                document.getElementById('txtIdProveedor').value = datalist[i].dataset.value;
+                                                                alert(txtIdProveedor.value);
+                                                                break;
+                                                            }
+                                                        }
+                                                    }, 1);
+                                                });
+
+                                            dropdown.addEventListener('blur', function(e) {
+                                                clearTimeout(timer);
+                                            });
+                                        </script>        
+                            
+                                    <button  onclick="modificarProducto()" type="submit" class="btn btn-fill btn-rose">Guardar</button>
+
+                                </div>
+                            </div>
+                        </div>                                            
+                    </div>
+                </div>
+            </div>               
+        </div>
+    </div>    

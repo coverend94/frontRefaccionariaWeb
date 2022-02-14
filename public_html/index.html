@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Refaccionaria</title>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    
+    <link rel="stylesheet" href="assets/vendors/iconly/bold.css">
+
+    <link rel="stylesheet" href="assets/vendors/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    
+    <script type="text/javascript" src="producto/funcionesProducto.js"></script> 
+    <script type="text/javascript" src="proveedor/funcionesProveedor.js"></script> 
+    <script type="text/javascript" src="assets/js/jquery-1.9.1.min.js"></script>
+
+       
+    </head>
+    <body>
+        <div id="app">
+            <div id="sidebar" class="active">
+                <div class="sidebar-wrapper active">
+        <div class="sidebar-header">
+            <div class="d-flex justify-content-between">
+                <div class="logo">
+                    <!-- <a href="index.html"><img src="assets/images/logo/logo.png" alt="Logo" srcset=""></a> -->
+                    <a href="index.html" >Refaccionaria</a>
+                </div>
+                <div class="toggler">
+                    <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-menu">
+            <ul class="menu">
+                
+                
+                <li
+                    class="sidebar-item active ">
+                    <a href="index.html" class='sidebar-link'>
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                
+                <li
+                    class="sidebar-item  ">
+                    <a onclick="cargarVerProductos()" class='sidebar-link'>
+                        <i class="bi bi-file-earmark-medical-fill"></i>
+                        <span>Productos</span>
+                    </a>
+                </li>
+                
+                <li
+                    class="sidebar-item ">
+                    <a onclick="cargarVerProveedores()" class='sidebar-link'>
+                        <i class="bi bi-collection-fill"></i>
+                        <span>Proveedor</span>
+                    </a>
+             
+                
+            </ul>
+        </div>
+        <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
+    </div>
+            </div>
+            <div id="main">
+                <header class="mb-3">
+                    <a href="#" class="burger-btn d-block d-xl-none">
+                        <i class="bi bi-justify fs-3"></i>
+                    </a>
+                </header>
+                
+    <div class="page-heading">
+        <div class="page-content">
+            <section class="row">
+                <div class="col-12 ">
+                    <div class="card">
+                        
+                        <!-- <div class="card-header">
+                            <h4>Productos</h4>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                                <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
+                            </div>
+        
+                            
+                        </div> -->
+                        <div class="row">
+                            <div class="table-responsive" id="principal">
+                                
+                            </div>
+                            <div   id="secundario">                                            
+                                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+            </section>
+        </div>
+    </div>
+    
+    
+                <footer>
+                    <div class="footer clearfix mb-0 text-muted">
+                       
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        
+    <script src="assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="assets/js/pages/dashboard.js"></script>
+    
+        <script src="assets/js/mazer.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,86 @@
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+ <link href="./assets/css/style.css" rel="stylesheet">
+ 
+ <!-- Modal -->
+        <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registro Producto</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                
+                    <div class="form-group label-floating">
+                        <label class="control-label">Nombre producto:</label>
+                        <input id="txtNombreProducto" type="text" class="form-control">
+                    </div> 
+
+                    <div class="form-group label-floating">
+                        <label class="control-label">Número de parte:</label>
+                        <input id="txtNumeroParte" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group label-floating">
+                        <label class="control-label">Marca:</label>
+                        <input id="txtMarca" type="text" class="form-control">
+                    </div>  
+                    
+                    <div class="form-group label-floating">                                            
+                            <div class="fileinput fileinput-new text-center" data-provides="fileinput">
+                                <div class="fileinput-new thumbnail">
+                                    <image id="imgProducto" style="width: 650; height: 650"/> 
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail"></div>
+                                <div>
+                                    <span class="btn btn-rose btn-round btn-file">
+                                        <span class="fileinput-new">Seleccionar imagen</span>
+                                        <span class="fileinput-exists">Cambiar</span>
+                                        <input class="form-control" id="txtFotoA" type="file" onchange="readURLProducto(this)">
+
+                                    </span>                                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    <div class="form-group label-floating">
+                        <label class="control-label">Costo compra:</label>
+                        <input id="txtCostoCompra" type="text" class="form-control">
+                    </div> 
+
+                    <div class="form-group label-floating">
+                        <label class="control-label">Precio venta:</label>
+                        <input id="txtPrecioVenta" type="text" class="form-control">
+                    </div>  
+
+                    <div class="form-group label-floating">
+                        <label class="control-label">Posicion:</label>
+                        <input id="txtPosicion" type="text" class="form-control">
+                    </div>
+
+                    <div class="form-group label-floating">
+                        <label class="control-label">Stock:</label>
+                        <input id="txtStock" type="text" class="form-control">
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button onclick="guardarProducto()" type="submit"  class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- end modal -->
+ 
+ 
+ 
+ <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
